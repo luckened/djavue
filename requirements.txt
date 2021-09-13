@@ -1,0 +1,6 @@
+Django==1.11.17
+django-sql-explorer==1.1.1
+python-dateutil==2.6.1
+psycopg2==2.8.6
+coverage==4.5
+tblib==1.3.2
