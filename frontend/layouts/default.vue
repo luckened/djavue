@@ -34,7 +34,7 @@
     },
     data: () => ({
       layout: {
-        drawer: true,
+        drawer: false,
       },
     }),
     computed: {

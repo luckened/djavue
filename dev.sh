@@ -3,7 +3,7 @@ RESTORE='\033[0m'
 RED='\033[00;31m'
 GREEN='\033[00;32m'
 YELLOW='\e[0;33m'
-HOST_PROD=djavue.example.com
+HOST_PROD=luckened.dev
 
 # Because nobody wants to be memorizing commands all the time
 # Instructions:

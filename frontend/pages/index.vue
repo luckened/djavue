@@ -1,12 +1,14 @@
 <template>
-  <v-layout justify-center align-center>
-    <v-btn color="success" :to="{name: 'todos'}">What TODO next?</v-btn>
-  </v-layout>
+  <home />
 </template>
 
 <script>
+import home from '~/components/home'
 
 export default {
+  components: {
+    home
+  },
   data () {
     return {}
   }

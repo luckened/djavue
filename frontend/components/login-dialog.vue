@@ -21,7 +21,6 @@ import AppApi from '~apijs'
 
 export default {
   data () {
-    console.log('data');
     return {
       visible: false,
       loading: false,

@@ -9,7 +9,6 @@ import todoList from '~/components/todo-list.vue'
 import Vuex from 'vuex'
 
 export default {
-  layout: 'complex',
   components: {
     todoList
   },
