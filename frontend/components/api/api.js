@@ -18,6 +18,9 @@ const api = {
     },
     list_todos(){
         return get('/api/list_todos');
+    },
+    list_tweets(){
+        return get('/api/list_tweets');
     }
 }
 export default api;

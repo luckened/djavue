@@ -5,6 +5,7 @@
 <script>
 export default {
   asyncData (context) {
+    console.log(context)
     return {
       username: context.params.username || ""
     }

@@ -8,7 +8,7 @@ const store = () => new Vuex.Store({
   },
   mutations: {
     SET_LOGGED_USER(state, logged_user) {
-      console.log('set logged user: '+JSON.stringify(logged_user))
+      console.log('set logged user: ' + JSON.stringify(logged_user))
       state.logged_user = logged_user
     },
     SET_SNACK_STATE(state, newstate) {
