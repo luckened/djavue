@@ -25,7 +25,6 @@ def login(request):
             user_dict = _user2dict(user)
     return JsonResponse(user_dict, safe=False)
 
-
 def logout(request):
     if request.method.lower() != 'post':
         raise Exception('Logout only via post')
@@ -54,6 +53,22 @@ def list_todos(request):
     todos = todo_svc.list_todos()
     return JsonResponse({'todos': todos})
 
+def list_tweets(request):
+  tweets = [{
+          'author_name': "Isaac Newton",
+          'author_username': "isaacnewton",
+          'author_avatar': "http://placekitten.com/200/300",
+          'created_at': "43 min",
+          'content': "Ser ou nao ser eis a questao"
+        },
+        {
+          'author_name': "Isaac Newton",
+          'author_username': "isaacnewton",
+          'author_avatar': "http://placekitten.com/200/300",
+          'created_at': "43 min",
+          'content': "Ser ou nao ser eis a questao"
+        }]
+  return JsonResponse(tweets, safe=False)
 
 def _user2dict(user):
     d = {
