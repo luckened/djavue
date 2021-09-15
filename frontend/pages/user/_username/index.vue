@@ -1,21 +1,31 @@
 <template>
-  <h1>pagina do usuario {{ username }}</h1>
+  <viewuser :user="user" :tweets="tweets" />
 </template>
 
 <script>
+import viewuser from "~/components/viewuser";
+import AppApi from "~apijs"
+
 export default {
-  asyncData (context) {
-    console.log(context)
+  components: {
+    viewuser
+  },
+  async asyncData (context) {
+    const username = context.params.username || ""
+    const tweets = await AppApi.list_tweets(username)
     return {
-      username: context.params.username || ""
+      user: {
+        username
+      },
+      tweets: tweets.data.tweets
     }
   },
   data () {
-    return {}
+    return {
+      tweets: []
+    }
   }
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

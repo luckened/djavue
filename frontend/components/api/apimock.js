@@ -48,28 +48,28 @@ const api = {
       ]
     });
   },
-  list_tweets() {
+  list_tweets(username) {
     return mockasync({
       tweets: [
         {
           author_name: "Isaac Newton",
-          author_username: "isaacnewton",
+          author_username: username || "isaacnewton",
           author_avatar: "http://placekitten.com/200/300",
-          created_at: "43 min",
+          created_at: "2021-09-14T20:19:07.551Z",
           content: "Ser ou nao ser eis a questao"
         },
         {
           author_name: "Victor Antonio",
-          author_username: "vict12",
+          author_username: username || "vict12",
           author_avatar: "http://placekitten.com/300/300",
-          created_at: "1 min",
+          created_at: "2021-07-14T20:18:07.551Z",
           content: "Bom dia"
         },
         {
           author_name: "asdasd",
-          author_username: "asasdasd",
+          author_username: username || "asasdasd",
           author_avatar: "http://placekitten.com/122/122",
-          created_at: "43 min",
+          created_at: "2020-09-14T20:18:07.551Z",
           content: "Escrevi sai correndo"
         }
       ]
