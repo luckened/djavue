@@ -20,7 +20,13 @@ const api = {
         return get('/api/list_todos');
     },
     list_tweets(){
-        return get('/api/list_tweets');
+      return get('/api/list_tweets');
+    },
+    get_user_details(){
+      return get('/api/user_details');
+    },
+    toggle_follow(username, value){
+      return post('/api/follow', {username, value})
     }
 }
 export default api;

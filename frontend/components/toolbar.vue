@@ -45,7 +45,7 @@
 <script>
   import Vuex from 'vuex'
   import loginDialog from '~/components/login-dialog.vue'
-  import Snacks from '~/helpers/Snacks.js'
+  import Snacks from '~/helpers/snacks.js'
   import AppApi from '~apijs'
   export default {
     components: {

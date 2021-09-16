@@ -74,6 +74,23 @@ const api = {
         }
       ]
     });
+  },
+  get_user_details(username) {
+    const avatar = {
+      isaacnewton: "http://placekitten.com/200/300",
+      vict12: "http://placekitten.com/300/300",
+      asasdasd: "http://placekitten.com/400/400"
+    }[username];
+
+    return mockasync({
+      username,
+      author_avatar: avatar,
+      last_tweet: "Penso, logo existo",
+      is_following: false
+    });
+  },
+  toggle_follow(username, value) {
+    return mockasync({});
   }
 };
 
