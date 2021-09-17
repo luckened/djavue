@@ -91,6 +91,9 @@ const api = {
   },
   toggle_follow(username, value) {
     return mockasync({});
+  },
+  toggle_follow(text) {
+    return mockasync();
   }
 };
 

@@ -10,3 +10,8 @@ def user_jon():
         password='snow',
     )
     return ze
+
+def usuarios_cientistas():
+    User.objects.create_user(username='newton')
+    User.objects.create_user(username='einstein')
+    User.objects.create_user(username='descartes')
