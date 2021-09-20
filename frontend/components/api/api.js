@@ -13,20 +13,15 @@ const api = {
   whoami() {
     return get("/api/whoami");
   },
-  add_todo(newtask) {
-    return post("/api/add_todo", { new_task: newtask });
+  list_tweets(username) {
+    return get("/api/list_tweets", { username });
   },
-  list_todos() {
-    return get("/api/list_todos");
-  },
-  list_tweets() {
-    return get("/api/list_tweets");
-  },
-  get_user_details() {
-    return get("/api/user_details");
+  get_user_details(username) {
+    return get("/api/get_user_details", { username });
   },
   toggle_follow(username, value) {
-    return post("/api/follow", { username, value });
+    console.log(value)
+    return post("/api/toggle_follow", { username, value });
   },
   tweet(content) {
     return post("/api/tweet", { content });

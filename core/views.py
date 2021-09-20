@@ -4,7 +4,7 @@ from django.http.response import HttpResponse, JsonResponse
 from django.contrib import auth
 from commons.django_model_utils import get_or_none
 from commons.django_views_utils import ajax_login_required
-from core.service import log_svc, tweeter_svc
+from core.service import log_svc, tweeter_svc, user_svc
 from django.views.decorators.csrf import csrf_exempt
 
 
@@ -53,7 +53,7 @@ def list_tweets(request):
 @ajax_login_required
 def toggle_follow(request):
     username = request.POST['username']
-    value = True if request.POST['value'] == 'True' else False
+    value = True if request.POST['value'] == 'true' else False
     tweeter_svc.toggle_follow(request.user, username, value)
     return JsonResponse({})
 
@@ -63,6 +63,13 @@ def tweet(request):
     content = request.POST['content']
     tweeter_svc.tweet(request.user, content)
     return JsonResponse({})
+
+
+def get_user_details(request):
+    username = request.GET.get('username')
+    logged_user = request.user if request.user.is_authenticated() else None
+    user_details = user_svc.get_details(logged_user, username)
+    return JsonResponse(user_details)
 
 
 def _user2dict(user):

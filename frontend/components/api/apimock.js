@@ -37,17 +37,6 @@ const api = {
         : { authenticated: false }
     );
   },
-  add_todo(newtask) {
-    return mockasync({ description: newtask, done: false });
-  },
-  list_todos() {
-    return mockasync({
-      todos: [
-        { description: "Do the laundry", done: true },
-        { description: "Walk the dog", done: false }
-      ]
-    });
-  },
   list_tweets(username) {
     return mockasync({
       tweets: [

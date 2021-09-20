@@ -1,7 +1,6 @@
 <template>
   <div>
     <home :tweets="tweets" />
-    <pre>{{ logged_user }}</pre>
   </div>
 </template>
 
@@ -23,11 +22,8 @@ export default {
   },
   asyncData() {
     return AppApi.list_tweets().then(result => {
-      return { tweets: result.data.tweets };
+      return { tweets: result.data };
     });
-  },
-  mounted() {
-    window.AppApi = AppApi
   }
 };
 </script>

@@ -25,7 +25,7 @@
 
 <script>
 export default {
-  props: ['tweets'],
+  props: ['tweets']
 };
 </script>
 
